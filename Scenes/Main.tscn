@@ -1,10 +1,16 @@
 [gd_scene format=3 uid="uid://m7amvd0a50ku"]
 
+[ext_resource type="PackedScene" uid="uid://bb5goe5gg0vwq" path="res://air_ship_hero.tscn" id="1_r150o"]
+
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rxg2q"]
-sky_top_color = Color(0.15294118, 0, 0.7058824, 1)
-sky_horizon_color = Color(0.11392903, 0.075693734, 0.27765453, 1)
-ground_bottom_color = Color(0, 0, 0.101960786, 1)
-ground_horizon_color = Color(0.11392903, 0.075693734, 0.27765453, 1)
+sky_top_color = Color(0.013624805, 0.17737338, 0.39159113, 1)
+sky_horizon_color = Color(0.048541166, 0.025996368, 0.14972857, 1)
+sky_energy_multiplier = 1.74
+sky_cover_modulate = Color(0.989602, 0.95905226, 0.88774997, 1)
+ground_bottom_color = Color(0.038181067, 0, 0.3379106, 1)
+ground_horizon_color = Color(0.4559374, 0.3913957, 0.8604311, 1)
+sun_angle_max = 50.69
+energy_multiplier = 5.13
 
 [sub_resource type="Sky" id="Sky_glv2v"]
 sky_material = SubResource("ProceduralSkyMaterial_rxg2q")
@@ -12,12 +18,14 @@ sky_material = SubResource("ProceduralSkyMaterial_rxg2q")
 [sub_resource type="Environment" id="Environment_uu6xs"]
 background_mode = 2
 sky = SubResource("Sky_glv2v")
+ambient_light_color = Color(0.7153089, 0.6406598, 0.66018003, 1)
 tonemap_mode = 2
 ssao_intensity = 2.16
 glow_enabled = true
 glow_intensity = 0.47
 glow_strength = 1.6
 glow_bloom = 0.88
+glow_blend_mode = 4
 glow_hdr_threshold = 1.66
 glow_hdr_luminance_cap = 38.39
 glow_map_strength = 0.78
@@ -91,9 +99,6 @@ mesh = SubResource("SphereMesh_20pc6")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D2" unique_id=759114277]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3173203, 3.3019066, 0)
 shape = SubResource("SphereShape3D_5vvyt")
-
-[node name="Camera3D" type="Camera3D" parent="." unique_id=875403980]
-transform = Transform3D(1, 0, 0, 0, 0.9617222, 0.27402636, 0, -0.27402636, 0.9617222, 0.14864218, 9.67362, 10.942677)
 
 [node name="EndgesMap" type="StaticBody3D" parent="." unique_id=1183794950]
 
@@ -654,3 +659,9 @@ mesh = SubResource("BoxMesh_glv2v")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacles/StaticBody3D" unique_id=1182412460]
 transform = Transform3D(2.4028256, 0, 0, 0, 2.0308545, 0, 0, 0, 5.2622075, 0, 5.621571, 0)
 shape = SubResource("ConcavePolygonShape3D_uu6xs")
+
+[node name="AirShipHero" parent="." unique_id=1602860136 instance=ExtResource("1_r150o")]
+transform = Transform3D(0.99973905, 0.022814952, 0.0011617438, -0.022844508, 0.99844563, 0.05084114, -2.2099067e-10, -0.0508544, 0.99870604, 0, 4.580685, -4.232493)
+
+[node name="Camera3D" type="Camera3D" parent="AirShipHero" unique_id=875403980]
+transform = Transform3D(0.9999999, -0.00048406798, -6.772275e-05, 0.00048815078, 0.9961196, 0.08800769, 2.4858859e-05, -0.08800776, 0.99611986, 0.055446528, 2.5601087, 2.3763447)
