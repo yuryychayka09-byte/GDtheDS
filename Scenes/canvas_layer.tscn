@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://oekkf2nyy31g"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1355597848]
+
+[node name="SpeedLabel" type="Label" parent="." unique_id=1163572936]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Speed:000%"

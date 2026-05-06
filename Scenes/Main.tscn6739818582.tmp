@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://m7amvd0a50ku"]
 
 [ext_resource type="PackedScene" uid="uid://bb5goe5gg0vwq" path="res://air_ship_hero.tscn" id="1_r150o"]
-[ext_resource type="Script" uid="uid://c4optyitbqher" path="res://Scenes/Tunnel_Manager.gd" id="2_kln2b"]
-[ext_resource type="PackedScene" uid="uid://oekkf2nyy31g" path="res://Scenes/canvas_layer.tscn" id="3_kln2b"]
+[ext_resource type="Script" path="res://Scenes/Tunnel_Manager.gd" id="2_kln2b"]
+[ext_resource type="PackedScene" uid="uid://bubb1dtpbccta" path="res://Scenes/tunnel_segment.tscn" id="3_rgh2o"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rxg2q"]
 sky_top_color = Color(0.013624805, 0.17737338, 0.39159113, 1)
@@ -48,5 +48,4 @@ transform = Transform3D(0.99999994, 0, 0, 0, 1.7650353, -0.02591297, 0, -0.02249
 
 [node name="TunnelManager" type="Node3D" parent="." unique_id=1073213258]
 script = ExtResource("2_kln2b")
-
-[node name="CanvasLayer" parent="." unique_id=1355597848 instance=ExtResource("3_kln2b")]
+segment_scene = ExtResource("3_rgh2o")
