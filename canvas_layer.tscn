@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://c3bokn3dmqsar"]
+
+[ext_resource type="Script" uid="uid://d3ob6xpl7syj4" path="res://canvas_layers.gd" id="1_v2lfg"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=560543774]
+script = ExtResource("1_v2lfg")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1601874352]
+offset_right = 1151.0
+offset_bottom = 649.0
+color = Color(0.13210145, 0.0046768403, 0.20407459, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=750795096]
+offset_left = 795.0
+offset_top = 181.0
+offset_right = 998.0
+offset_bottom = 456.0
+
+[node name="Retry" type="Button" parent="VBoxContainer" unique_id=2002395510]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Retry"
+
+[node name="Exit" type="Button" parent="VBoxContainer" unique_id=203399515]
+layout_mode = 2
+theme_override_font_sizes/font_size = 37
+text = "Exit"
+
+[node name="Label" type="Label" parent="." unique_id=2079964643]
+offset_left = 153.0
+offset_top = 121.0
+offset_right = 245.0
+offset_bottom = 144.0
+scale = Vector2(6.7087975, 14.754497)
+text = "Game OVER"
+
+[connection signal="pressed" from="VBoxContainer/Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]

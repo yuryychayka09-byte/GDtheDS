@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="GD the DS"
-run/main_scene="uid://m7amvd0a50ku"
+config/name="G Dthe Ds Main (1)"
+run/main_scene="uid://djed47t8ecup0"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
